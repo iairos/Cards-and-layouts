@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --font-clr: rgb(178, 173, 173);
+  --card-clr: rgb(255, 255, 255);
+  --body-bg-clr: #dddddddd;
+}
+body {
+  background-color: var(--body-bg-clr);
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+header {
+  width: 350px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  padding-block-start: 2em;
+}
+h1 {
+  padding: 0.5em;
+  border: 2px solid #a3a3a3dd;
+  border-radius: 0.5em;
+  width: 100%;
+  box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px,
+    rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px,
+    rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px,
+    rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px,
+    rgb(255, 85, 85) 40px -40px;
+}
+button {
+  cursor: pointer;
+  border-radius: 0.5em;
+  margin: 0.2em;
+}
+button:hover {
+  background-color: rgba(145, 135, 135, 0.298);
+}
+
+.card-container {
+  columns: 4 200px;
+  column-gap: 2em;
+  margin: 0 auto;
+  padding: 60px;
+}
+.car-card-container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--card-clr);
+  border: 1px solid black;
+  border-radius: 1em;
+  padding: 1em;
+  margin-block-end: 1em;
+  color: var(--font-clr);
+  break-inside: avoid;
+  box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px,
+    rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px,
+    rgba(240, 46, 170, 0.05) 0px 25px;
+}
+
+.car-card-header {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  /* max-width: 200px; */
+  /* place-content: start; */
+  place-items: start;
+  place-content: center;
+}
+
+.car-card-header h3 {
+  margin-block-end: 0;
+}
+.car-card-header h4 {
+  grid-column: 1/2;
+  width: 100%;
+}
+.car-card-header img {
+  grid-column: 2/3;
+  grid-row: 1/3;
+  place-self: center;
+  width: 100%;
+  padding-inline-start: 2em;
+}
+
+p {
+  margin-inline-start: 0;
+  align-self: self-start;
+  text-align: start;
+  /* max-width: 200px; */
+}
+.car-card-footer {
+  display: flex;
+  justify-content: space-between;
+}
+.car-card-footer button {
+  align-self: center;
+}
